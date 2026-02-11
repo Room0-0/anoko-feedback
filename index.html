@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anoko no feedback</title>
+    <style>
+        /* 全体の設定 */
+        body {
+            background-color: #1a1a1a; /* 画像が読み込まれるまでの背景色 */
+            /* 背景画像の設定：先ほどのアー写のURLを入れる場所 */
+            background-image: url('anoko1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #dcdcdc; /* シューゲイザーらしいスチールブルー */
+            font-family: "Hiragino Mincho ProN", "MS Mincho", serif;
+            margin: 0;
+            line-height: 1.8;
+            letter-spacing: 0.15em;
+        }
+
+        /* 画面全体を覆う暗いフィルター（文字を読みやすくするため） */
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        /* ロゴ部分 */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 50px;
+            text-transform: lowercase;
+            filter: blur(0.5px);
+            animation: drift 10s infinite alternate;
+        }
+
+        /* ナビゲーション */
+        nav {
+            margin-bottom: 100px;
+        }
+
+        nav a {
+            color: #b0c4de;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            text-shadow: 0 0 10px #b0c4de;
+        }
+
+        /* セクション設定 */
+        section {
+            margin-bottom: 150px;
+            padding-top: 50px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(176, 196, 222, 0.3);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* メンバー紹介のレイアウト */
+        .member-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .member-card h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-size: 0.7rem;
+            opacity: 0.6;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .member-desc {
+            font-size: 0.8rem;
+            line-height: 2;
+        }
+
+        /* SNSリンク */
+        .sns-links a {
+            display: block;
+            margin: 10px 0;
+            color: #fff;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+
+        /* 浮遊感のあるアニメーション */
+        @keyframes drift {
+            from { transform: translateY(0); }
+            to { transform: translateY(10px); }
+        }
+
+        @media (max-width: 600px) {
+            .member-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <div class="container">
+        
+        <header>
+            <h1>anoko no feedback</h1>
+            <nav>
+                <a href="#story">story</a>
+                <a href="#members">members</a>
+                <a href="#contact">contact</a>
+            </nav>
+        </header>
+
+        <section id="story">
+            <h2>story</h2>
+            <p>砂糖菓子の轟音、放課後の残響。<br>
+            
+        </section>
+
+        <section id="members">
+            <h2>members</h2>
+            <div class="member-grid">
+                <div class="member-card">
+                    <h3>ゆら</h3>
+                    <span class="member-role">Vocal / Guitar</span>
+                    <p class="member-desc">前髪の裏側だけで、一生を終えたい</p>
+                </div>
+                <div class="member-card">
+                    <h3>ミミ</h3>
+                    <span class="member-role">Guitar / Feedback</span>
+                    <p class="member-desc">31個目のエフェクターは足元のガラクタ</p>
+                </div>
+                <div class="member-card">
+                    <h3>ナノ</h3>
+                    <span class="member-role">Bass / Chorus</span>
+                    <p class="member-desc">実は、この中で私だけが実在している。</p>
+                </div>
+                <div class="member-card">
+                    <h3>とわ</h3>
+                    <span class="member-role">Drums / Art</span>
+                    <p class="member-desc">雨の音を録るために、ドラムを捨てたい。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>contact</h2>
+            <div class="sns-links">
+                <a href="https://x.com/anoko_feedback" target="_blank">𝕏 / anoko_feedback</a>
+                <a href="https://www.instagram.com/anoko_no_feedback/" target="_blank">Instagram / anoko_no_feedback</a>
+   <a href="https://www.tiktok.com/@anoko_no_feedback/" target="_blank">Tiktok / anoko_no_feedback</a>
+            </div>          
+            </div>
+            <p style="font-size: 0.7rem; margin-top: 50px; opacity: 0.4;">© 2026 anoko no feedback</p>
+        </section>
+
+    </div>
+</div>
+
+</body>
+</html>
